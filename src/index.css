@@ -1,0 +1,16 @@
+@import "tailwindcss";
+@plugin "flowbite-react/plugin/tailwindcss";
+@source "../.flowbite-react/class-list.json";
+
+@import "swiper/css";
+@import "swiper/css/navigation";
+@import "swiper/css/pagination";
+
+
+.select-red {
+  border: 1px solid red;
+}
+
+.select-green {
+  border: 1px solid green;
+}

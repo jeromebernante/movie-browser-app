@@ -1,0 +1,56 @@
+# cmd your project container folder
+> npm create vite@latest <project name>
+> React
+> Javascript
+> cd <project name>
+> code .
+> npm install tailwindcss @tailwindcss/vite
+
+
+# Configure the Vite plugin in your vite.config.ts
+import tailwindcss from "@tailwindcss/vite";
+import react from "@vitejs/plugin-react";
+import { defineConfig } from "vite";
+
+// https://vite.dev/config/
+export default defineConfig({
+  plugins: [react(), tailwindcss()],
+});
+
+# Remove add styling in src/index.css and src/App.css
+# Add Tailwind CSS to your CSS file (src/index.css):
+@import "tailwindcss";
+
+#later just add custom class below import tailwindcss
+
+# Install Flowbite React:
+> npx flowbite-react@latest init
+> npm install flowbite flowbite-react
+> npm install
+
+# SITES
+  flowbite-react v0.12.9
+  https://flowbite-react.com/docs/components/accordion
+
+  tailwincss v4.1
+  https://tailwindcss.com/docs/styling-with-utility-classes
+
+
+# I use
+  const App = () => {}
+
+# Icons
+> npm install lucide-react 
+> npm install react-icons
+
+# Pages router
+> npm install react-router-dom
+
+
+useEffect(() => {},[])
+
+
+https://youtu.be/G6D9cBaLViA?t=4535
+
+tips
+https://www.youtube.com/shorts/CAEuTN4qYqI
