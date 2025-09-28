@@ -15,8 +15,8 @@ function App() {
   useEffect(() => {
     const titles = {
       "/": "Home - Movie Browser",
-      "/movies/latest": "Latest Movies",
-      "/tv/latest": "Latest TV Shows",
+      "/movies": "Latest Movies",
+      "/tv": "Latest TV Shows",
     };
     document.title = titles[location.pathname] || "Movie Browser";
   }, [location]);
