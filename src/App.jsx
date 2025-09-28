@@ -3,7 +3,7 @@ import Index from "./pages/Index";
 import Movies from "./pages/Movies";
 import TvShows from "./pages/TvShows";
 import MovieDetails from "./pages/MovieDetails";
-import TvDetails from "./pages/TvDetails"; // you’ll create later
+import TvDetails from "./pages/TvDetails";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import { useEffect } from "react";
@@ -14,7 +14,7 @@ function App() {
 
   useEffect(() => {
     const titles = {
-      "/": "Home - Movie Browser",
+      "/": "Home - Movie Browser1",
       "/movies": "Latest Movies",
       "/tv": "Latest TV Shows",
     };
