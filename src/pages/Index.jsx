@@ -12,7 +12,6 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Pagination, Navigation } from "swiper/modules";
 import { Link } from "react-router-dom";
 
-import Navbar from "../components/Navbar"; 
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
@@ -53,7 +52,7 @@ const Index = () => {
   const currentTop = activeTop === "movie" ? topMovies : topTV;
 
   return (
-    <main className="bg-gray-950 text-white min-h-screen">
+    <main>
       {/* Hero Section */}
       <section className="relative h-[calc(100vh-70px)]">
         <Swiper
@@ -101,7 +100,7 @@ const Index = () => {
           <div className="flex items-center bg-gray-800 rounded-full p-1">
             <button
               onClick={() => setActiveTab("movie")}
-              className={`px-4 py-1 rounded-full text-sm font-medium transition ${
+              className={`px-4 py-1 rounded-full text-sm font-medium transition hover:cursor-pointer ${
                 activeTab === "movie"
                   ? "bg-red-600 text-white"
                   : "text-gray-400 hover:text-white"
@@ -111,7 +110,7 @@ const Index = () => {
             </button>
             <button
               onClick={() => setActiveTab("tv")}
-              className={`px-4 py-1 rounded-full text-sm font-medium transition ${
+              className={`px-4 py-1 rounded-full text-sm font-medium transition hover:cursor-pointer ${
                 activeTab === "tv"
                   ? "bg-red-600 text-white"
                   : "text-gray-400 hover:text-white"
@@ -162,7 +161,7 @@ const Index = () => {
           <div className="flex items-center bg-gray-800 rounded-full p-1">
             <button
               onClick={() => setActiveTop("movie")}
-              className={`px-4 py-1 rounded-full text-sm font-medium transition ${
+              className={`px-4 py-1 rounded-full text-sm font-medium transition hover:cursor-pointer ${
                 activeTop === "movie"
                   ? "bg-red-600 text-white"
                   : "text-gray-400 hover:text-white"
@@ -172,7 +171,7 @@ const Index = () => {
             </button>
             <button
               onClick={() => setActiveTop("tv")}
-              className={`px-4 py-1 rounded-full text-sm font-medium transition ${
+              className={`px-4 py-1 rounded-full text-sm font-medium transition hover:cursor-pointer ${
                 activeTop === "tv"
                   ? "bg-red-600 text-white"
                   : "text-gray-400 hover:text-white"
@@ -276,11 +275,6 @@ const Index = () => {
           ))}
         </div>
       </section>
-
-      {/* Footer */}
-      <footer className="py-6 text-center text-gray-500 text-sm h-[70px]">
-        © 2025 Movie Browser App · Built by Jerome
-      </footer>
     </main>
   );
 };

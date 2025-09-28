@@ -184,3 +184,11 @@ export const getMovieDetails = async (id) => {
     return null;
   }
 };
+
+export const getTVDetails = async (id) => {
+  const res = await fetch(
+    `https://api.themoviedb.org/3/tv/${id}?api_key=${API_KEY}&language=en-US`
+  );
+  return res.json();
+};
+

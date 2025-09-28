@@ -1,38 +1,37 @@
-import { Routes, Route, useLocation } from "react-router-dom";
-import { useEffect } from "react";
+import { Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
 import Movies from "./pages/Movies";
-import Navbar from "./components/Navbar";
+import TvShows from "./pages/TvShows";
 import MovieDetails from "./pages/MovieDetails";
+import TvDetails from "./pages/TvDetails"; // you’ll create later
+import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
+import { useEffect } from "react";
+import { useLocation } from "react-router-dom";
 
 function App() {
   const location = useLocation();
 
-  // ✅ Dynamic title
   useEffect(() => {
-    switch (location.pathname) {
-      case "/":
-        document.title = "Movie Browser App | Home";
-        break;
-      case "/movies":
-        document.title = "Movie Browser App | Movies";
-        break;
-      // add more routes here
-      default:
-        document.title = "Movie Browser App";
-    }
+    const titles = {
+      "/": "Home - Movie Browser",
+      "/movies/latest": "Latest Movies",
+      "/tv/latest": "Latest TV Shows",
+    };
+    document.title = titles[location.pathname] || "Movie Browser";
   }, [location]);
 
   return (
-    <div className="bg-gray-950 text-white min-h-screen">
-      {/* ✅ Navbar is global */}
+    <div className="min-h-screen flex flex-col bg-gray-950 text-white">
       <Navbar />
-
       <Routes>
         <Route path="/" element={<Index />} />
         <Route path="/movies" element={<Movies />} />
+        <Route path="/tv" element={<TvShows />} />
         <Route path="/movie/:id" element={<MovieDetails />} />
+        <Route path="/tv/:id" element={<TvDetails />} />
       </Routes>
+      <Footer />
     </div>
   );
 }
